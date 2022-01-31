@@ -17,9 +17,3 @@ reincicio.addEventListener("click", ()=>{
     numero = 0;
     document.querySelector("#numero").textContent = numero;
 })
-
-
-
-console.log(typeof(numero));
-console.log(decremento);
-console.log(incremento);

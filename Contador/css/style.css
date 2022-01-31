@@ -5,24 +5,39 @@ html {
 *, *:before, *:after {
     box-sizing: inherit;
 }
+body{
+    min-height: 100%;
+    overflow: hidden;
+}
 body, html {
     height: 100%;
     width: 100%;
-    margin: 0;
+    /* margin: 0; */
     background: rgb(2,0,36);
     background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(1,118,141,1) 100%, rgba(0,245,255,0.7763480392156863) 100%); 
-    
-    background-size: cover;
+    background-size:auto;
     background-repeat: no-repeat;
 }
 p{
     font-size: 50px;
     color: white;
 }
+.parent-div{
+    height:90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
 
+.header{
+    display: flex;
+    justify-content: center;
+}
 .contador{
-    width: 50%;
-    height: 50vh;
+    width: 25%;
+    height: 40vh;
     display: flex;
     flex-direction: column; 
     justify-content: space-evenly;
@@ -33,14 +48,10 @@ p{
     box-shadow: 0px 0px 30px 8px rgba(0,0,0,1);
     background: rgb(2,0,36);
     background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(1,118,141,1) 100%, rgba(0,245,255,0.7763480392156863) 100%);
+    
 }
 
-.parent-div{
-    height:90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 
 .boton{
     border: 3px solid white;
@@ -56,4 +67,27 @@ p{
 .boton:hover{
     background-color: white;
     color: rgb(2,0,36);
+}
+
+@media (max-width: 768px) {
+    .contador{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .botones{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+}
+
+.header h1{
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 15px 50px;
+    border: 3px solid #fff;
+    color: white;
 }
